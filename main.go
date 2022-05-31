@@ -204,7 +204,7 @@ func init() {
 	}
 
 	// 通过代码写死的方式添加主人账号
-	sus = append(sus, 12345678)
+	sus = append(sus, 1546466950)
 	// sus = append(sus, 87654321)
 
 	// 启用 gui
@@ -255,7 +255,7 @@ func init() {
 func main() {
 	rand.Seed(time.Now().UnixNano()) // 全局 seed，其他插件无需再 seed
 	// 帮助
-	zero.OnFullMatchGroup([menu]string{"/help", ".help", "菜单"}, zero.OnlyToMe).SetBlock(true).
+	zero.OnFullMatchGroup([菜单]string{"/help", ".help", "菜单"}, zero.OnlyToMe).SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
 			ctx.SendChain(message.Text(kanban.Banner, "\n可发送\"/服务列表\"查看 bot 功能"))
 		})
